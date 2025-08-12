@@ -1,0 +1,6 @@
+{
+  "spec/library_tree_spec.rb:2017463506": [
+    [9, 12, 5, "RSpec/ExpectActual: Provide the actual value you are testing to `expect(...)`.", 170962968],
+    [9, 22, 2, "RSpec/BeEq: Prefer `be` over `eq`.", 5860785]
+  ]
+}
