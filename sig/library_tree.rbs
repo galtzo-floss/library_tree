@@ -1,4 +1,48 @@
 module LibraryTree
-  VERSION: String
+  module Version
+    VERSION: String
+  end
+
+  class Node
+    attr_reader mod: Module
+    attr_reader parents: Array[Node]
+    attr_reader children: Array[Node]
+
+    def initialize: (Module mod) -> void
+    def name: -> String
+    def add_child: (Node child) -> void
+    def add_parent: (Node parent) -> void
+    def root?: -> bool
+    def to_h: (?Hash[Integer, bool] seen) -> Hash[Symbol, untyped]
+    def render: (?Integer indent, ?Hash[Integer, bool] seen) -> String
+  end
+
+  module Registry
+    def self.mutex: -> ::Mutex
+    def self.nodes: -> Hash[Module, Node]
+    def self.tracked?: (Module mod) -> bool
+    def self.ensure_node: (Module mod) -> Node
+    def self.mark_tracked: (Module mod) -> void
+    def self.link: (Module parent, Module child) -> void
+    def self.roots: -> Array[Node]
+    def self.all: -> Array[Node]
+    def self.reset!: -> void
+  end
+
+  module Watcher
+    module ClassMethods
+      def included: (Module base) -> void
+    end
+
+    def self.included: (Module mod) -> void
+  end
+
+  module self
+    def roots: -> Array[Node]
+    def nodes: -> Array[Node]
+    def render: -> String
+    def reset!: -> void
+  end
+
   # See the writing guide of rbs: https://github.com/ruby/rbs#guides
 end

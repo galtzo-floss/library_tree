@@ -40,11 +40,11 @@ Gem::Specification.new do |spec|
     end
   end
 
-  spec.summary = "Build a tree of module inclusion of a target module into other modules"
-  spec.description = spec.summary
+  spec.summary = "Six-degrees of (Kevin Bacon's?) Module"
+  spec.description = "Builds a tree of module inclusion of a target module into other modules"
   spec.homepage = "https://github.com/galtzo-floss/library_tree"
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 2.3.0"
+  spec.required_ruby_version = ">= 1.9.2"
 
   spec.metadata["homepage_uri"] = "https://#{spec.name.tr("_", "-")}.galtzo.com/"
   spec.metadata["source_code_uri"] = "#{spec.homepage}/tree/v#{spec.version}"
@@ -101,7 +101,7 @@ Gem::Specification.new do |spec|
   #       visibility and discoverability on RubyGems.org.
   #       However, development dependencies in gemspec will install on
   #       all versions of Ruby that will run in CI.
-  #       This gem, and its runtime dependencies, will install on Ruby down to 2.3.x.
+  #       This gem, and its runtime dependencies, will install on Ruby down to 1.9.2.
   #       This gem, and its development dependencies, will install on Ruby down to 2.3.x.
   #       This is because in CI easy installation of Ruby, via setup-ruby, is for >= 2.3.
   #       Thus, dev dependencies in gemspec must have
@@ -121,7 +121,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("rspec_junit_formatter", "~> 0.6")      # ruby >= 2.3.0, for GitLab Test Result Parsing
   spec.add_development_dependency("rspec-stubbed_env", "~> 1.0")          # ruby >= 2.3.0 (helper for stubbing ENV in specs)
   spec.add_development_dependency("silent_stream", "~> 1.0", ">= 1.0.11") # ruby >= 2.3.0, for output capture
-  spec.add_development_dependency("timecop", "~> 0.9", ">= 0.9.10")       # ruby >= 1.9.2
 
   # Development tasks
   spec.add_development_dependency("rake", "~> 13.0")                      # ruby >= 2.2

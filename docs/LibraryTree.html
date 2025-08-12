@@ -115,7 +115,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#nodes-class_method" title="nodes (class method)">.<strong>nodes</strong>  &#x21d2; Object </a>
+      <a href="#nodes-class_method" title="nodes (class method)">.<strong>nodes</strong>  &#x21d2; Array&lt;LibraryTree::Node&gt; </a>
     
 
     
@@ -129,7 +129,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Return all nodes.</p>
+    <span class="summary_desc"><div class='inline'><p>Return all nodes currently tracked in the registry.</p>
 </div></span>
   
 </li>
@@ -138,7 +138,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#render-class_method" title="render (class method)">.<strong>render</strong>  &#x21d2; Object </a>
+      <a href="#render-class_method" title="render (class method)">.<strong>render</strong>  &#x21d2; String </a>
     
 
     
@@ -161,7 +161,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#reset!-class_method" title="reset! (class method)">.<strong>reset!</strong>  &#x21d2; Object </a>
+      <a href="#reset!-class_method" title="reset! (class method)">.<strong>reset!</strong>  &#x21d2; void </a>
     
 
     
@@ -184,7 +184,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#roots-class_method" title="roots (class method)">.<strong>roots</strong>  &#x21d2; Object </a>
+      <a href="#roots-class_method" title="roots (class method)">.<strong>roots</strong>  &#x21d2; Array&lt;LibraryTree::Node&gt; </a>
     
 
     
@@ -216,7 +216,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="nodes-class_method">
   
-    .<strong>nodes</strong>  &#x21d2; <tt>Object</tt> 
+    .<strong>nodes</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="LibraryTree/Node.html" title="LibraryTree::Node (class)">LibraryTree::Node</a></span>&gt;</tt> 
   
 
   
@@ -224,13 +224,30 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Return all nodes</p>
+    <p>Return all nodes currently tracked in the registry</p>
 
 
   </div>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="LibraryTree/Node.html" title="LibraryTree::Node (class)">LibraryTree::Node</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>all known nodes</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -238,12 +255,12 @@
       <pre class="lines">
 
 
-17
-18
-19</pre>
+26
+27
+28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/library_tree.rb', line 17</span>
+      <pre class="code"><span class="info file"># File 'lib/library_tree.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_nodes'>nodes</span>
   <span class='const'><span class='object_link'><a href="LibraryTree/Registry.html" title="LibraryTree::Registry (module)">Registry</a></span></span><span class='period'>.</span><span class='id identifier rubyid_all'><span class='object_link'><a href="LibraryTree/Registry.html#all-class_method" title="LibraryTree::Registry.all (method)">all</a></span></span>
@@ -256,7 +273,7 @@
       <div class="method_details ">
   <h3 class="signature " id="render-class_method">
   
-    .<strong>render</strong>  &#x21d2; <tt>Object</tt> 
+    .<strong>render</strong>  &#x21d2; <tt>String</tt> 
   
 
   
@@ -271,6 +288,23 @@
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>a textual tree representation of all roots and their descendants</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -278,12 +312,12 @@
       <pre class="lines">
 
 
-22
-23
-24</pre>
+32
+33
+34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/library_tree.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'lib/library_tree.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_render'>render</span>
   <span class='id identifier rubyid_roots'>roots</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span> <span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_render'>render</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span>
@@ -296,7 +330,7 @@
       <div class="method_details ">
   <h3 class="signature " id="reset!-class_method">
   
-    .<strong>reset!</strong>  &#x21d2; <tt>Object</tt> 
+    .<strong>reset!</strong>  &#x21d2; <tt>void</tt> 
   
 
   
@@ -304,7 +338,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Testing/utility: reset the registry</p>
+    <p class="note returns_void">This method returns an undefined value.</p><p>Testing/utility: reset the registry</p>
 
 
   </div>
@@ -318,12 +352,12 @@
       <pre class="lines">
 
 
-27
-28
-29</pre>
+38
+39
+40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/library_tree.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'lib/library_tree.rb', line 38</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_reset!'>reset!</span>
   <span class='const'><span class='object_link'><a href="LibraryTree/Registry.html" title="LibraryTree::Registry (module)">Registry</a></span></span><span class='period'>.</span><span class='id identifier rubyid_reset!'><span class='object_link'><a href="LibraryTree/Registry.html#reset!-class_method" title="LibraryTree::Registry.reset! (method)">reset!</a></span></span>
@@ -336,7 +370,7 @@
       <div class="method_details ">
   <h3 class="signature " id="roots-class_method">
   
-    .<strong>roots</strong>  &#x21d2; <tt>Object</tt> 
+    .<strong>roots</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="LibraryTree/Node.html" title="LibraryTree::Node (class)">LibraryTree::Node</a></span>&gt;</tt> 
   
 
   
@@ -351,6 +385,23 @@
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="LibraryTree/Node.html" title="LibraryTree::Node (class)">LibraryTree::Node</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>an array of nodes that have no parents</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -358,12 +409,12 @@
       <pre class="lines">
 
 
-12
-13
-14</pre>
+20
+21
+22</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/library_tree.rb', line 12</span>
+      <pre class="code"><span class="info file"># File 'lib/library_tree.rb', line 20</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_roots'>roots</span>
   <span class='const'><span class='object_link'><a href="LibraryTree/Registry.html" title="LibraryTree::Registry (module)">Registry</a></span></span><span class='period'>.</span><span class='id identifier rubyid_roots'><span class='object_link'><a href="LibraryTree/Registry.html#roots-class_method" title="LibraryTree::Registry.roots (method)">roots</a></span></span>
@@ -378,7 +429,7 @@
 </div>
 
       <div id="footer">
-  Generated on Tue Aug 12 01:48:13 2025 by
+  Generated on Tue Aug 12 03:17:26 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.4.5).
 </div>

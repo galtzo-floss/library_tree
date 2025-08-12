@@ -63,7 +63,7 @@
 <p>The format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog v1</a>,<br>
 and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning v2</a>.</p>
 
-<h2 id="unreleased"><a href="https://gitlab.com/galtzo-floss/library_tree/-/compare/v1.0.0-alpha.3...main">Unreleased</a></h2>
+<h2 id="unreleased"><a href="https://gitlab.com/galtzo-floss/library_tree/-/compare/v1.0.0...main">Unreleased</a></h2>
 <h3 id="added">Added</h3>
 <h3 id="changed">Changed</h3>
 <h3 id="deprecated">Deprecated</h3>
@@ -71,66 +71,15 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 <h3 id="fixed">Fixed</h3>
 <h3 id="security">Security</h3>
 
-<h2 id="100-alpha3---2025-08-11">
-<a href="https://gitlab.com/galtzo-floss/library_tree/-/compare/v1.0.0-alpha.2...v1.0.0-alpha.3">1.0.0-alpha.3</a> - 2025-08-11</h2>
+<h2 id="100---2025-08-12">
+<a href="https://gitlab.com/galtzo-floss/library_tree/-/compare/e07550dfecf0719a91a03b9fbd29b97c3471b1d8...v1.0.0">1.0.0</a> - 2025-08-12</h2>
 <ul>
-  <li>TAG: <a href="https://gitlab.com/galtzo-floss/library_tree/-/tags/v1.0.0-alpha.3">v1.0.0-alpha.3</a>
+  <li>TAG: <a href="https://gitlab.com/galtzo-floss/library_tree/-/tags/v1.0.0">v1.0.0</a>
 </li>
-  <li>COVERAGE: 100.00% – 283/283 lines in 8 files</li>
-  <li>BRANCH COVERAGE: 100.00% – 93/93 branches in 8 files</li>
-  <li>98.25% documented
+  <li>COVERAGE: 100.00% – 96/96 lines in 5 files</li>
+  <li>BRANCH COVERAGE: 100.00% – 10/10 branches in 5 files</li>
+  <li>93.94% documented
     <h3 id="added-1">Added</h3>
-  </li>
-  <li>Global override for environment variable prefix via <code>ENV['FLOSS_FUNDING_ENV_PREFIX']</code>. Set to an empty string to disable any prefix entirely.</li>
-  <li>Global override to disable and silence LibraryTree entirely.
-    <ul>
-      <li>Set <code>ENV['FLOSS_FUNDING_SILENT']</code> to a value of <code>"CATHEDRAL_OR_BAZAAR"</code> (case insensitive match) to disable and silence LibraryTree entirely.</li>
-      <li>Any other value will allow LibraryTree to run normally.
-        <h3 id="changed-1">Changed</h3>
-      </li>
-    </ul>
-  </li>
-  <li>(BREAKING) Moved <code>DEFAULT_PREFIX</code> and <code>SILENT</code> constants into <code>LibraryTree::Constants</code> and updated all usages to reference <code>::LibraryTree::Constants::DEFAULT_PREFIX</code> and <code>::LibraryTree::Constants::SILENT</code>.</li>
-  <li>Replaced hard-coded “FLOSS_FUNDING_” magic strings with <code>::LibraryTree::Constants::DEFAULT_PREFIX</code> where applicable.</li>
-  <li>Updated documentation, RBS signatures, and specs to reflect the new Constants module and global prefix behavior.
-    <h3 id="deprecated-1">Deprecated</h3>
-    <h3 id="removed-1">Removed</h3>
-  </li>
-  <li>(BREAKING) Removed per-library ability to override the ENV prefix via <code>:env_prefix</code> option to <code>LibraryTree::Poke.new</code>. A single process-wide override is now supported via <code>ENV['FLOSS_FUNDING_ENV_PREFIX']</code>.</li>
-  <li>(BREAKING) Removed <code>UnderBar::DEFAULT_PREFIX</code> constant.
-    <h3 id="fixed-1">Fixed</h3>
-  </li>
-  <li>Clarified examples and error messages referencing how to set the ENV variable name.
-    <h3 id="security-1">Security</h3>
-  </li>
-</ul>
-
-<h2 id="100-alpha2---2025-08-10">
-<a href="https://gitlab.com/galtzo-floss/library_tree/-/compare/v1.0.0-alpha.1...v1.0.0-alpha.2">1.0.0-alpha.2</a> - 2025-08-10</h2>
-<ul>
-  <li>TAG: <a href="https://gitlab.com/galtzo-floss/library_tree/-/tags/v1.0.0-alpha.2">v1.0.0-alpha.2</a>
-</li>
-  <li>COVERAGE: 100.00% – 263/263 lines in 6 files</li>
-  <li>BRANCH COVERAGE: 100.00% – 85/85 branches in 6 files</li>
-  <li>100.00% documented
-    <h3 id="added-2">Added</h3>
-  </li>
-  <li>More documentation
-    <h3 id="fixed-2">Fixed</h3>
-  </li>
-  <li>Required <code>base.txt</code> added to gem package</li>
-  <li>Documentation typos</li>
-</ul>
-
-<h2 id="100-alpha1---2025-08-10">
-<a href="https://gitlab.com/galtzo-floss/library_tree/-/compare/389ece6fb9bd04013d11edca6fb6830139a84f4c...v1.0.0-alpha.1">1.0.0-alpha.1</a> - 2025-08-10</h2>
-<ul>
-  <li>TAG: <a href="https://gitlab.com/galtzo-floss/library_tree/-/tags/v1.0.0-alpha.1">v1.0.0-alpha.1</a>
-</li>
-  <li>COVERAGE: 100.00% – 262/262 lines in 6 files</li>
-  <li>BRANCH COVERAGE: 100.00% – 85/85 branches in 6 files</li>
-  <li>100.00% documented
-    <h3 id="added-3">Added</h3>
   </li>
   <li>Initial release</li>
 </ul>
@@ -138,7 +87,7 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 </div></div>
 
       <div id="footer">
-  Generated on Tue Aug 12 01:48:13 2025 by
+  Generated on Tue Aug 12 03:17:26 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.4.5).
 </div>

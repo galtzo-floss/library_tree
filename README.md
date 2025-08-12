@@ -13,66 +13,23 @@
 
 ---
 
-[![Liberapay Goal Progress][⛳liberapay-img]][⛳liberapay] [![Sponsor Me on Github][🖇sponsor-img]][🖇sponsor] [![Buy me a coffee][🖇buyme-small-img]][🖇buyme] [![Donate on Polar][🖇polar-img]][🖇polar] [![Donate to my FLOSS or refugee efforts at ko-fi.com][🖇kofi-img]][🖇kofi] [![Donate to my FLOSS or refugee efforts using Patreon][🖇patreon-img]][🖇patreon]
+[![Liberapay Goal Progress][⛳liberapay-img]][⛳liberapay] [![Donate on PayPal][🖇paypal-img]][🖇paypal] [![Sponsor Me on Github][🖇sponsor-img]][🖇sponsor] [![Buy me a coffee][🖇buyme-small-img]][🖇buyme] [![Donate to my FLOSS or refugee efforts at ko-fi.com][🖇kofi-img]][🖇kofi] [&rarr; more funding options](#FLOSS-Funding)
 
 ## 🌻 Synopsis
 
-This tool can help library maintainers earn money from their open source work in one line of code.
-
-👉️ No network calls.
-👉️ No tracking.
-👉️ No oversight.
-👉️ Minimal crypto hashing.
-💡 Easily disabled by `ENV['FLOSS_FUNDING_SILENT'] = "CATHEDRAL_OR_BAZAAR"`
-
-Now, back to the one line of code I mentioned. If you blink you may miss it...
+Understand where modules wander off to when they are bored, in **one line of code**. It is a simple, lightweight (< 100 LOC), easy-to-use tool tree generator. A tree representation of where a module ends up included.
 
 ```ruby
 module MyGemLibrary
-  include LibraryTree::Poke.new(__FILE__) # <====== THERE IT IS! ONE LINE OF CODE!
+  include LibraryTree::Watcher # <====== THERE IT IS! ONE LINE OF CODE!
 end
 ```
 
-The website that will generate activation keys for your gems is coming soon @ [floss-funding.dev](https://floss-funding.dev).  FLOSS Funding relies on empathy, respect, honor, and annoyance of the most extreme mildness.  It doesn't accept payments for activation keys, and trusts you to go and sponsor or donate to your favorite open source projects before getting their "activation key".
+I will find out how far back to support in Ruby versions when this runs in CI GitHub Actions.
 
-What does an _activation key_ do?  It silences the nags for a library, and "activates" your peace of mind. It rewards you with a gold star sticker (⭐️) for each project you fund when your process exits.  That's it.
-
-The project *does not affect* licensing of projects.  It is purely a tool to help library maintainers earn money from their open source work.
-
-This is permitted by nearly all, if not all, FLOSS licenses, including the popular MIT, BSD 2-clause, BSD 3-clause, Apache 2.0, etc.
-
-There are two kinds of "free" in software:
-
-1. Free as in beer
-2. Free as in freedom (of speech)
-
-No FLOSS licenses I am aware of guarantee "free as in beer". Since developers deserve to be paid for their work, I decided to make this tool.
-
-It has been my experience that work on the dark underbelly of software, down in the test harnesses, and the dev tools, often gets overlooked, as people focus on the big frameworks.
-
-This tool makes it far easier to get paid for your work down there at the bottom of the stack, in the dev dependencies that get overlooked by most OSS funding tools.
-
-Activation keys use a cipher encryption algorithm against a 2400-word dictionary, with some other data, like the project's namespace, and the current month, thrown in, to make valid activation keys slightly difficult to discover manually. Once a key is made it is valid forever. There is no revocation. The activation keys are _opaque_, rather than _private_. They are not tied to you in any way. Other people may use the same one. And that's fine! They don't do anything except silence some STDOUT nagging.
-
-## TO DO List
-
-Website coming soon.
-
-- [ ] A website to generate activation keys for gems
-    - [ ] List all known gems that can be activated with library_tree
-    - [ ] Account creation with email address, for those who want to keep a record of their generated activation keys
-    - [ ] (Optional) Enter Gem Name
-    - [ ] Affirm they have purchased an activation key
-    - [ ] (Optional) Receive activation key specific to namespace & month generated
-    - [x] Activation key will remain valid for that namespace forever (tested out to the June, 5425 C.E.)
-
-I expect the current release of this gem to be compatible with Ruby 1.8.7+,
-but it is only tested on CI against Ruby 2.3+,
-due to the inherent limitations of GitHub Actions.
-
-| 🚚 _Amazing_ test matrix was brought to you by | 🔎 appraisal2 🔎                                                                     |
-|------------------------------------------------|--------------------------------------------------------------------------------------|
-| 👟 Check it out!                               | ✨ [github.com/appraisal-rb/appraisal2](https://github.com/appraisal-rb/appraisal2) ✨ |
+| 🚚 _Amazing_ test matrix was brought to you by | 🔎 appraisal2 🔎                                                                    |
+|------------------------------------------------|-------------------------------------------------------------------------------------|
+| 👟 Check it out!                               | ✨ [github.com/appraisal-rb/appraisal2][💎appraisal2] ✨ |
 
 ## 💡 Info you can shake a stick at
 
@@ -92,7 +49,7 @@ due to the inherent limitations of GitHub Actions.
 
 [gh-discussions]: https://github.com/galtzo-floss/library_tree/discussions
 
-### Enterprise Support
+### Enterprise Support [![Tidelift](https://tidelift.com/badges/package/rubygems/library_tree)](https://tidelift.com/subscription/pkg/rubygems-library_tree?utm_source=rubygems-library_tree&utm_medium=referral&utm_campaign=readme)
 
 <details>
   <summary>Need enterprise-level guarantees?</summary>
@@ -121,7 +78,7 @@ Alternatively:
 | Source                  | [![Source on GitLab.com][📜src-gl-img]][📜src-gl] [![Source on CodeBerg.org][📜src-cb-img]][📜src-cb] [![Source on Github.com][📜src-gh-img]][📜src-gh] [![The best SHA: dQw4w9WgXcQ!][🧮kloc-img]][🧮kloc]                                                                                                                      |
 | Documentation           | [![Current release on RubyDoc.info][📜docs-cr-rd-img]][🚎yard-current] [![YARD on Galtzo.com][📜docs-head-rd-img]][🚎yard-head] [![Maintainer Blog][🚂maint-blog-img]][🚂maint-blog] [![Wiki][📜wiki-img]][📜wiki]                                                                                                               |
 | Compliance              | [![License: MIT][📄license-img]][📄license-ref] [![📄ilo-declaration-img]][📄ilo-declaration] [![Security Policy][🔐security-img]][🔐security] [![Contributor Covenant 2.1][🪇conduct-img]][🪇conduct] [![SemVer 2.0.0][📌semver-img]][📌semver]                                                                                 |
-| Style                   | [![Enforced Code Style Linter][💎rlts-img]][💎rlts] [![Keep-A-Changelog 1.0.0][📗keep-changelog-img]][📗keep-changelog] [![Gitmoji Commits][📌gitmoji-img]][📌gitmoji]                                                                                                                                                           |
+| Style                   | [![Enforced Code Style Linter][💎rlts-img]][💎rlts] [![Keep-A-Changelog 1.0.0][📗keep-changelog-img]][📗keep-changelog] [![Gitmoji Commits][📌gitmoji-img]][📌gitmoji] [![Compatibility appraised by: appraisal2][💎appraisal2-img]][💎appraisal2]                                                                               |
 | Support                 | [![Live Chat on Discord][✉️discord-invite-img]][✉️discord-invite] [![Get help from me on Upwork][👨🏼‍🏫expsup-upwork-img]][👨🏼‍🏫expsup-upwork] [![Get help from me on Codementor][👨🏼‍🏫expsup-codementor-img]][👨🏼‍🏫expsup-codementor]                                                                                    |
 | Maintainer 🎖️          | [![Follow Me on LinkedIn][💖🖇linkedin-img]][💖🖇linkedin] [![Follow Me on Ruby.Social][💖🐘ruby-mast-img]][💖🐘ruby-mast] [![Follow Me on Bluesky][💖🦋bluesky-img]][💖🦋bluesky] [![Contact Maintainer][🚂maint-contact-img]][🚂maint-contact] [![My technical writing][💖💁🏼‍♂️devto-img]][💖💁🏼‍♂️devto]                   |
 | `...` 💖                | [![Find Me on WellFound:][💖✌️wellfound-img]][💖✌️wellfound] [![Find Me on CrunchBase][💖💲crunchbase-img]][💖💲crunchbase] [![My LinkTree][💖🌳linktree-img]][💖🌳linktree] [![More About Me][💖💁🏼‍♂️aboutme-img]][💖💁🏼‍♂️aboutme] [🧊][💖🧊berg] [🐙][💖🐙hub]  [🛖][💖🛖hut] [🧪][💖🧪lab]                                |
@@ -175,59 +132,83 @@ NOTE: Be prepared to track down certs for signed gems and add them the same way 
 
 Usage patterns:
 
-1. Traditional namespace (uses the including module's name):
+1. Include Watcher into another module.
     ```ruby
     module MyGemLibrary
-      include LibraryTree::Poke.new(__FILE__)
+      module SharedFunctionality
+        include LibraryTree::Watcher
+      end
     end
     ```
-2. Arbitrary custom namespace (can add version, or anything else):
+2. Include that other module somewhere else:
     ```ruby
-    module MyGemLibrary
-      include LibraryTree::Poke.new(__FILE__, namespace: "Custom::Namespace::V4")
+    module MyApp
+      include MyGemLibrary::SharedFunctionality
     end
     ```
+3. That's it! If you want to see the tree, do:
+    ```ruby
+    puts LibraryTree.render
+    ```
+4. You're still done, but if you want more, you can watch other modules with the watcher:
+    ```ruby
+    module AnotherLibrary
+      include LibraryTree::Watcher
+    end
+    ```
+5. Or you can let modules that are already watched do the watching:
+    ```ruby
+    module YetAnotherLibrary
+      include MyGemLibrary::SharedFunctionality
+    end
+    ```
+6. Want to see the tree again, after those last changes?:
+    ```ruby
+    puts LibraryTree.render
+    ```
+5. What if we go actually crazy, and do more module stuff:
+    ```ruby
+    module MyApp
+      include YetAnotherLibrary
+    end
+    ```
+6. What do you expect to see? The render hasn't changed at all! The root node state of `YetAnotherLibrary` is already fixed, so it doesn't get made a child of `MyApp`. Load order matters, and this isn't a foolproof way to know all of the places a module gets used. This library is *very simple* and doesn't intend to be a full-fledged dependency tree, nor track dependency the way Ruby itself does.
+7. Why use it?
+   1. Debug infinite recursions (maybe). This library handles them, but, again, load order matters, so maybe it won't hep?
+   2. It might help you understand relationships between things in your code, or library code.
 
-## Configuration
+Here's something almost cool. In a Rails 8.0.2 app I have this in `config/applicaiton.rb`:
+```ruby
+require_relative "boot"
 
-### Silence via lobal Environment Variable
-
-For global silence the best solution is to set the environment variable `FLOSS_FUNDING_SILENT=CATHEDRAL_OR_BAZAAR` before your application starts.
-
-If you can't control ENV variables, and you can control the stack, at the beginning of the stack, before other things load, simply `require "library_tree/silent"`, and it will silence all output. Note that this is less performant than setting the global environment variable, as above.
-
-### Silence via Poke.new `silent` option.
-
-`silent` options values can be any of:
-
-- truthy - indicates that the library including Poke.new requires `LibraryTree` to be silent, perhaps due to scanning the output of a command, or generating output that is expected elsewhere.
-- falsey - indicates that the library including Poke.new does not require `LibraryTree` to be silent. This is effectively the default.
-- Object that responds to `:call` - indicates that the library including Poke.new might require `LibraryTree` to be silent, and that evaluation will be done whenever LibraryTree attempts to print something.
-
-If you have a library that doesn't know, at the time of `Poke.new` inclusion, if it needs silence, pass an object that responds to `:call` as the `silent` option to `LibraryTree::Poke.new`.
-
-**IMPORTANT** - By the time your `Poke.new` using library loads into a stack, other libraries may have already loaded `Poke.new` for themselves, and may have already generated output. This is not a solution for silencing all output. The main thing it can reliably do is silence the output from the at_exit handler.
-
-If you need to silence **everything**, do so by setting the environment variable `FLOSS_FUNDING_SILENT=CATHEDRAL_OR_BAZAAR` before your application starts.
-
-### File-based Configuration
-
-Gems that use the library_tree gem can configure some features by creating a `.library_tree.yml` file at their root directory. This works in the same manner as `.rubocop.yml` for gems that use RuboCop.
-
-The following options are configured via the `.library_tree.yml` file:
-
-1. `suggested_donation_amount` - The suggested donation amount to display in the begging message (default: 5)
-2. `library_tree_url` - The URL to direct users to for donations or sponsorship
-   a. default: https://floss-funding.dev, which doesn't take donations on behalf of other projects, but it will have helpful tips on how to find a way to donate.
-
-#### Example Configuration
-
-In your `.library_tree.yml` at the root of your project:
-
-```yaml
-suggested_donation_amount: 10
-library_tree_url: https://example.com/fund
+require "rails/all"
 ```
+I patch it:
+```diff
+ require_relative "boot"
+
++require "active_support/actionable_error"
++ActiveSupport::ActionableError.send(:include, LibraryTree::Watcher)
++
+ require "rails/all"
+```
+I run `bin/rails c` and then:
+```log
+➜  bin/rails c
+Loading development environment (Rails 8.0.2)
+floss-funding-dev(dev)> puts LibraryTree.render
+* ActiveRecord::NoDatabaseError
+  * ActiveSupport::ActionableError
+* ActiveRecord::PendingMigrationError
+  * ActiveSupport::ActionableError
+=> nil
+```
+
+ActiveSupport already has a `DescendantsTracker` [module](https://api.rubyonrails.org/classes/ActiveSupport/DescendantsTracker.html) which is superceded in Ruby 3.1+ by Ruby's native `Class#subclasses`.
+
+This is not that.  This tracks up to the "including" parents and down to "including" children (when it does anything at all). Don't expect accurate results!
+
+I'm not sure if this is useful to anyone, not even me, but I wanted to explore how it would work.
 
 ## 🔐 Security
 
@@ -286,25 +267,12 @@ Specifically, if a minor or patch version is released that breaks backward compa
 a new version should be immediately released that restores compatibility.
 Breaking changes to the public API will only be introduced with new major versions.
 
-### 📌 Is "Platform Support" part of the public API?
+> dropping support for a platform is both obviously and objectively a breaking change <br/>
+>—Jordan Harband ([@ljharb](https://github.com/ljharb), maintainer of SemVer) [in SemVer issue 716][📌semver-breaking]
 
-Yes.  But I'm obligated to include notes...
-
-SemVer should, but doesn't explicitly, say that dropping support for specific Platforms
-is a *breaking change* to an API.
-It is obvious to many, but not all, and since the spec is silent, the bike shedding is endless.
-
-> dropping support for a platform is both obviously and objectively a breaking change
-
-- Jordan Harband (@ljharb, maintainer of SemVer) [in SemVer issue 716][📌semver-breaking]
-
-To get a better understanding of how SemVer is intended to work over a project's lifetime,
-read this article from the creator of SemVer:
-
-- ["Major Version Numbers are Not Sacred"][📌major-versions-not-sacred]
-
-As a result of this policy, and the interpretive lens used by the maintainer,
-you can (and should) specify a dependency on these libraries using
+I understand that policy doesn't work universally ("exceptions to every rule!"),
+but it is the policy here.
+As such, in many cases it is good to specify a dependency on this library using
 the [Pessimistic Version Constraint][📌pvc] with two digits of precision.
 
 For example:
@@ -312,6 +280,20 @@ For example:
 ```ruby
 spec.add_dependency("library_tree", "~> 1.0")
 ```
+
+<details>
+<summary>📌 Is "Platform Support" part of the public API? More details inside.</summary>
+
+SemVer should, but doesn't explicitly, say that dropping support for specific Platforms
+is a *breaking change* to an API.
+It is obvious to many, but not all, and since the spec is silent, the bike shedding is endless.
+
+To get a better understanding of how SemVer is intended to work over a project's lifetime,
+read this article from the creator of SemVer:
+
+- ["Major Version Numbers are Not Sacred"][📌major-versions-not-sacred]
+
+</details>
 
 See [CHANGELOG.md][📌changelog] for a list of releases.
 
@@ -335,35 +317,50 @@ See [LICENSE.txt][📄license] for the official [Copyright Notice][📄copyright
     </li>
 </ul>
 
-## 🤑 One more thing
+## FLOSS Funding
 
-Having arrived at the bottom of the page, please endure a final supplication.
-The primary maintainer of this gem, Peter Boling, wants
-Ruby to be a great place for people to solve problems, big and small.
-Please consider supporting his efforts via the giant yellow link below,
-or one of the smaller ones, depending on button size preference.
+> How wonderful it is that nobody need wait a single moment before starting to improve the world.<br/>
+>—Anne Frank
 
-[![Buy me a latte][🖇buyme-img]][🖇buyme]
+Final supplication: I want Ruby to be a great place for people to solve problems,
+big and small; the way it was when I started.
+This is why I am driven to rehab libraries that have lost their luster,
+and build new libraries that solve real problems.
+I was laid off in an RIF in early 2025, and have been rejected dozens of times since then,
+mostly without even a conversation.
+I need your help to reach my goal of supporting myself, my wife, my kids,
+and the farm (12 chickens, 2 dogs, 3 rabbits, 8 cats) via my open source efforts,
+which total 79 hours over the last 7 days as I'm writing this.
+If you work at a company that uses my work, please encourage them to support me as a corporate sponsor.
+Some of my work might show up in `bundle fund`.
+But that's not a runtime solution, so it is mostly out-of-sight, out-of-mind.
+I've built a new library, [floss_funding], to help all open source developers, including myself, earn money for our work.
 
-[![Liberapay Goal Progress][⛳liberapay-img]][⛳liberapay] [![Sponsor Me on Github][🖇sponsor-img]][🖇sponsor] [![Donate on Polar][🖇polar-img]][🖇polar] [![Donate to my FLOSS or refugee efforts at ko-fi.com][🖇kofi-img]][🖇kofi] [![Donate to my FLOSS or refugee efforts using Patreon][🖇patreon-img]][🖇patreon]
+**[Floss-Funding.dev][🖇floss-funding.dev]: 👉️ No network calls. 👉️ No tracking. 👉️ No oversight. 👉️ Minimal crypto hashing. 💡 Easily disabled**
+
+[![Liberapay Goal Progress][⛳liberapay-img]][⛳liberapay] [![Donate on PayPal][🖇paypal-img]][🖇paypal] [![Sponsor Me on Github][🖇sponsor-img]][🖇sponsor] [![Buy me a coffee][🖇buyme-small-img]][🖇buyme] [![Donate on Polar][🖇polar-img]][🖇polar] [![Donate to my FLOSS or refugee efforts at ko-fi.com][🖇kofi-img]][🖇kofi] [![Donate to my FLOSS or refugee efforts using Patreon][🖇patreon-img]][🖇patreon]
 
 P.S. If you need help️ or want to say thanks, 👇 Join the Discord.
 
 [![Live Chat on Discord][✉️discord-invite-img]][✉️discord-invite]
 
-[⛳liberapay-img]: https://img.shields.io/liberapay/goal/pboling.svg?logo=liberapay
+[⛳liberapay-img]: https://img.shields.io/liberapay/goal/pboling.svg?logo=liberapay&color=a51611
 [⛳liberapay]: https://liberapay.com/pboling/donate
 [🖇sponsor-img]: https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&logo=github
 [🖇sponsor]: https://github.com/sponsors/pboling
-[🖇polar-img]: https://img.shields.io/badge/polar-donate-yellow.svg
+[🖇polar-img]: https://img.shields.io/badge/polar-donate-a51611.svg
 [🖇polar]: https://polar.sh/pboling
-[🖇kofi-img]: https://img.shields.io/badge/a_more_different_coffee-✓-yellow.svg
+[🖇kofi-img]: https://img.shields.io/badge/ko--fi-✓-a51611.svg
 [🖇kofi]: https://ko-fi.com/O5O86SNP4
-[🖇patreon-img]: https://img.shields.io/badge/patreon-donate-yellow.svg
+[🖇patreon-img]: https://img.shields.io/badge/patreon-donate-a51611.svg
 [🖇patreon]: https://patreon.com/galtzo
-[🖇buyme-small-img]: https://img.shields.io/badge/buy_me_a_coffee-✓-yellow.svg?style=flat
+[🖇buyme-small-img]: https://img.shields.io/badge/buy_me_a_coffee-✓-a51611.svg?style=flat
 [🖇buyme-img]: https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20latte&emoji=&slug=pboling&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff
 [🖇buyme]: https://www.buymeacoffee.com/pboling
+[🖇paypal-img]: https://img.shields.io/badge/donate-paypal-a51611.svg?style=flat&logo=paypal
+[🖇paypal]: https://www.paypal.com/paypalme/peterboling
+[🖇floss-funding.dev]: https://floss-funding.dev
+[🖇floss-funding-gem]: https://github.com/galtzo-floss/floss_funding
 [✉️discord-invite]: https://discord.gg/3qme4XHNKN
 [✉️discord-invite-img]: https://img.shields.io/discord/1373797679469170758?style=for-the-badge
 
@@ -509,7 +506,7 @@ P.S. If you need help️ or want to say thanks, 👇 Join the Discord.
 [📌gitmoji]:https://gitmoji.dev
 [📌gitmoji-img]:https://img.shields.io/badge/gitmoji_commits-%20😜%20😍-34495e.svg?style=flat-square
 [🧮kloc]: https://www.youtube.com/watch?v=dQw4w9WgXcQ
-[🧮kloc-img]: https://img.shields.io/badge/KLOC-0.262-FFDD67.svg?style=for-the-badge&logo=YouTube&logoColor=blue
+[🧮kloc-img]: https://img.shields.io/badge/KLOC-0.096-FFDD67.svg?style=for-the-badge&logo=YouTube&logoColor=blue
 [🔐security]: SECURITY.md
 [🔐security-img]: https://img.shields.io/badge/security-policy-259D6C.svg?style=flat
 [📄copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
@@ -524,4 +521,6 @@ P.S. If you need help️ or want to say thanks, 👇 Join the Discord.
 [💎SHA_checksums]: https://gitlab.com/galtzo-floss/library_tree/-/tree/main/checksums
 [💎rlts]: https://github.com/rubocop-lts/rubocop-lts
 [💎rlts-img]: https://img.shields.io/badge/code_style_%26_linting-rubocop--lts-34495e.svg?plastic&logo=ruby&logoColor=white
+[💎appraisal2]: https://github.com/appraisal-rb/appraisal2
+[💎appraisal2-img]: https://img.shields.io/badge/appraised_by-appraisal2-34495e.svg?plastic&logo=ruby&logoColor=white
 [💎d-in-dvcs]: https://railsbling.com/posts/dvcs/put_the_d_in_dvcs/

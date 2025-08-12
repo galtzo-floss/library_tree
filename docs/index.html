@@ -65,7 +65,7 @@
 
 <hr>
 
-<p><a href="https://liberapay.com/pboling/donate"><img src="https://img.shields.io/liberapay/goal/pboling.svg?logo=liberapay" alt="Liberapay Goal Progress"></a> <a href="https://github.com/sponsors/pboling"><img src="https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&amp;logo=github" alt="Sponsor Me on Github"></a> <a href="https://www.buymeacoffee.com/pboling"><img src="https://img.shields.io/badge/buy_me_a_coffee-%E2%9C%93-yellow.svg?style=flat" alt="Buy me a coffee"></a> <a href="https://polar.sh/pboling"><img src="https://img.shields.io/badge/polar-donate-yellow.svg" alt="Donate on Polar"></a> <a href="https://ko-fi.com/O5O86SNP4"><img src="https://img.shields.io/badge/a_more_different_coffee-%E2%9C%93-yellow.svg" alt="Donate to my FLOSS or refugee efforts at ko-fi.com"></a> <a href="https://patreon.com/galtzo"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Donate to my FLOSS or refugee efforts using Patreon"></a></p>
+<p><a href="https://liberapay.com/pboling/donate"><img src="https://img.shields.io/liberapay/goal/pboling.svg?logo=liberapay&amp;color=a51611" alt="Liberapay Goal Progress"></a> <a href="https://www.paypal.com/paypalme/peterboling"><img src="https://img.shields.io/badge/donate-paypal-a51611.svg?style=flat&amp;logo=paypal" alt="Donate on PayPal"></a> <a href="https://github.com/sponsors/pboling"><img src="https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&amp;logo=github" alt="Sponsor Me on Github"></a> <a href="https://www.buymeacoffee.com/pboling"><img src="https://img.shields.io/badge/buy_me_a_coffee-%E2%9C%93-a51611.svg?style=flat" alt="Buy me a coffee"></a> <a href="https://ko-fi.com/O5O86SNP4"><img src="https://img.shields.io/badge/ko--fi-%E2%9C%93-a51611.svg" alt="Donate to my FLOSS or refugee efforts at ko-fi.com"></a> <a href="#FLOSS-Funding">→ more funding options</a></p>
 
 <h2 id="-synopsis">🌻 Synopsis</h2>
 
@@ -109,7 +109,8 @@ end
 
 </details>
 
-<h3 id="enterprise-support">Enterprise Support</h3>
+<h3 id="enterprise-support-">Enterprise Support <a href="https://tidelift.com/subscription/pkg/rubygems-library_tree?utm_source=rubygems-library_tree&amp;utm_medium=referral&amp;utm_campaign=readme"><img src="https://tidelift.com/badges/package/rubygems/library_tree" alt="Tidelift"></a>
+</h3>
 
 <details>
   <summary>Need enterprise-level guarantees?</summary>
@@ -169,7 +170,7 @@ Alternatively:
     <tr>
       <td>Source</td>
       <td>
-<a href="https://gitlab.com/galtzo-floss/library_tree/"><img src="https://img.shields.io/badge/GitLab-FBA326?style=for-the-badge&amp;logo=Gitlab&amp;logoColor=orange" alt="Source on GitLab.com"></a> <a href="https://codeberg.org/galtzo-floss/library_tree"><img src="https://img.shields.io/badge/CodeBerg-4893CC?style=for-the-badge&amp;logo=CodeBerg&amp;logoColor=blue" alt="Source on CodeBerg.org"></a> <a href="https://github.com/galtzo-floss/library_tree"><img src="https://img.shields.io/badge/GitHub-238636?style=for-the-badge&amp;logo=Github&amp;logoColor=green" alt="Source on Github.com"></a> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://img.shields.io/badge/KLOC-0.262-FFDD67.svg?style=for-the-badge&amp;logo=YouTube&amp;logoColor=blue" alt="The best SHA: dQw4w9WgXcQ!"></a>
+<a href="https://gitlab.com/galtzo-floss/library_tree/"><img src="https://img.shields.io/badge/GitLab-FBA326?style=for-the-badge&amp;logo=Gitlab&amp;logoColor=orange" alt="Source on GitLab.com"></a> <a href="https://codeberg.org/galtzo-floss/library_tree"><img src="https://img.shields.io/badge/CodeBerg-4893CC?style=for-the-badge&amp;logo=CodeBerg&amp;logoColor=blue" alt="Source on CodeBerg.org"></a> <a href="https://github.com/galtzo-floss/library_tree"><img src="https://img.shields.io/badge/GitHub-238636?style=for-the-badge&amp;logo=Github&amp;logoColor=green" alt="Source on Github.com"></a> <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://img.shields.io/badge/KLOC-0.096-FFDD67.svg?style=for-the-badge&amp;logo=YouTube&amp;logoColor=blue" alt="The best SHA: dQw4w9WgXcQ!"></a>
 </td>
     </tr>
     <tr>
@@ -305,9 +306,12 @@ NOTE: Be prepared to track down certs for signed gems and add them the same way 
 </code></pre>
   </li>
   <li>What do you expect to see? The render hasn’t changed at all! The root node state of <code>YetAnotherLibrary</code> is already fixed, so it doesn’t get made a child of <code>MyApp</code>. Load order matters, and this isn’t a foolproof way to know all of the places a module gets used. This library is <em>very simple</em> and doesn’t intend to be a full-fledged dependency tree, nor track dependency the way Ruby itself does.</li>
-  <li>So why would I use it?<br>
-a. Debug infinite recursions (maybe). This library handles them, but, again, load order matters, so maybe it won’t hep?<br>
-b. It might help you understand relationships between things in your code, or library code.</li>
+  <li>Why use it?
+    <ol>
+      <li>Debug infinite recursions (maybe). This library handles them, but, again, load order matters, so maybe it won’t hep?</li>
+      <li>It might help you understand relationships between things in your code, or library code.</li>
+    </ol>
+  </li>
 </ol>
 
 <p>Here’s something almost cool. In a Rails 8.0.2 app I have this in <code>config/applicaiton.rb</code>:</p>
@@ -448,17 +452,30 @@ See <a href="file.LICENSE.html" title="LICENSE.txt">LICENSE.txt</a> for the offi
     </li>
 </ul>
 
-<h2 id="-one-more-thing">🤑 One more thing</h2>
+<h2 id="floss-funding">FLOSS Funding</h2>
 
-<p>Having arrived at the bottom of the page, please endure a final supplication.<br>
-The primary maintainer of this gem, Peter Boling, wants<br>
-Ruby to be a great place for people to solve problems, big and small.<br>
-Please consider supporting his efforts via the giant yellow link below,<br>
-or one of the smaller ones, depending on button size preference.</p>
+<blockquote>
+  <p>How wonderful it is that nobody need wait a single moment before starting to improve the world.<br><br>
+—Anne Frank</p>
+</blockquote>
 
-<p><a href="https://www.buymeacoffee.com/pboling"><img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20latte&amp;emoji=&amp;slug=pboling&amp;button_colour=FFDD00&amp;font_colour=000000&amp;font_family=Cookie&amp;outline_colour=000000&amp;coffee_colour=ffffff" alt="Buy me a latte"></a></p>
+<p>Final supplication: I want Ruby to be a great place for people to solve problems,<br>
+big and small; the way it was when I started.<br>
+This is why I am driven to rehab libraries that have lost their luster,<br>
+and build new libraries that solve real problems.<br>
+I was laid off in an RIF in early 2025, and have been rejected dozens of times since then,<br>
+mostly without even a conversation.<br>
+I need your help to reach my goal of supporting myself, my wife, my kids,<br>
+and the farm (12 chickens, 2 dogs, 3 rabbits, 8 cats) via my open source efforts,<br>
+which total 79 hours over the last 7 days as I’m writing this.<br>
+If you work at a company that uses my work, please encourage them to support me as a corporate sponsor.<br>
+Some of my work might show up in <code>bundle fund</code>.<br>
+But that’s not a runtime solution, so it is mostly out-of-sight, out-of-mind.<br>
+I’ve built a new library, [floss_funding], to help all open source developers, including myself, earn money for our work.</p>
 
-<p><a href="https://liberapay.com/pboling/donate"><img src="https://img.shields.io/liberapay/goal/pboling.svg?logo=liberapay" alt="Liberapay Goal Progress"></a> <a href="https://github.com/sponsors/pboling"><img src="https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&amp;logo=github" alt="Sponsor Me on Github"></a> <a href="https://polar.sh/pboling"><img src="https://img.shields.io/badge/polar-donate-yellow.svg" alt="Donate on Polar"></a> <a href="https://ko-fi.com/O5O86SNP4"><img src="https://img.shields.io/badge/a_more_different_coffee-%E2%9C%93-yellow.svg" alt="Donate to my FLOSS or refugee efforts at ko-fi.com"></a> <a href="https://patreon.com/galtzo"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Donate to my FLOSS or refugee efforts using Patreon"></a></p>
+<p><strong><a href="https://floss-funding.dev">Floss-Funding.dev</a>: 👉️ No network calls. 👉️ No tracking. 👉️ No oversight. 👉️ Minimal crypto hashing. 💡 Easily disabled</strong></p>
+
+<p><a href="https://liberapay.com/pboling/donate"><img src="https://img.shields.io/liberapay/goal/pboling.svg?logo=liberapay&amp;color=a51611" alt="Liberapay Goal Progress"></a> <a href="https://www.paypal.com/paypalme/peterboling"><img src="https://img.shields.io/badge/donate-paypal-a51611.svg?style=flat&amp;logo=paypal" alt="Donate on PayPal"></a> <a href="https://github.com/sponsors/pboling"><img src="https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&amp;logo=github" alt="Sponsor Me on Github"></a> <a href="https://www.buymeacoffee.com/pboling"><img src="https://img.shields.io/badge/buy_me_a_coffee-%E2%9C%93-a51611.svg?style=flat" alt="Buy me a coffee"></a> <a href="https://polar.sh/pboling"><img src="https://img.shields.io/badge/polar-donate-a51611.svg" alt="Donate on Polar"></a> <a href="https://ko-fi.com/O5O86SNP4"><img src="https://img.shields.io/badge/ko--fi-%E2%9C%93-a51611.svg" alt="Donate to my FLOSS or refugee efforts at ko-fi.com"></a> <a href="https://patreon.com/galtzo"><img src="https://img.shields.io/badge/patreon-donate-a51611.svg" alt="Donate to my FLOSS or refugee efforts using Patreon"></a></p>
 
 <p>P.S. If you need help️ or want to say thanks, 👇 Join the Discord.</p>
 
@@ -467,7 +484,7 @@ or one of the smaller ones, depending on button size preference.</p>
 </div></div>
 
       <div id="footer">
-  Generated on Tue Aug 12 01:48:13 2025 by
+  Generated on Tue Aug 12 03:17:26 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.4.5).
 </div>

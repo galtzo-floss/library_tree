@@ -3,13 +3,11 @@
 RSpec.describe LibraryTree do
   before { described_class.reset! }
 
-  it "has a version number" do
-    expect(LibraryTree::VERSION).not_to be_nil
-  end
-
   describe "Watcher tracking" do
     module LTSpecA; end
+
     module LTSpecB; end
+
     module LTSpecC; end
 
     it "links parent->child when both sides are watched and inclusion happens" do
@@ -49,7 +47,7 @@ RSpec.describe LibraryTree do
 
       LTSpecA.module_eval { include LTSpecB } # A -> B
       # Force a cycle for test purposes
-      LibraryTree::Registry.link(parent: LTSpecB, child: LTSpecA) # B -> A
+      LibraryTree::Registry.link(LTSpecB, LTSpecA) # B -> A
 
       roots = described_class.roots
       expect(roots).to eq([])
@@ -115,9 +113,9 @@ RSpec.describe LibraryTree do
         r1 = mk.call(:LTBigRoot1)
         r2 = mk.call(:LTBigRoot2)
         # Watched branches
-        a  = mk.call(:LTBigA)
-        b  = mk.call(:LTBigB)
-        c  = mk.call(:LTBigC)
+        a = mk.call(:LTBigA)
+        b = mk.call(:LTBigB)
+        c = mk.call(:LTBigC)
         # Shared watched leaf
         shared = mk.call(:LTBigShared)
         # Unwatched interleaves
@@ -125,11 +123,11 @@ RSpec.describe LibraryTree do
         uw2 = mk.call(:LTBigUW2)
 
         # Watch selected modules (roots and significant nodes)
-        r1.module_eval     { include LibraryTree::Watcher }
-        r2.module_eval     { include LibraryTree::Watcher }
-        a.module_eval      { include LibraryTree::Watcher }
-        b.module_eval      { include LibraryTree::Watcher }
-        c.module_eval      { include LibraryTree::Watcher }
+        r1.module_eval { include LibraryTree::Watcher }
+        r2.module_eval { include LibraryTree::Watcher }
+        a.module_eval { include LibraryTree::Watcher }
+        b.module_eval { include LibraryTree::Watcher }
+        c.module_eval { include LibraryTree::Watcher }
         shared.module_eval { include LibraryTree::Watcher }
         # uw1 and uw2 intentionally do NOT include Watcher
 

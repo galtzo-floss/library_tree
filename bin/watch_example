@@ -1,0 +1,42 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "library_tree"
+
+module MyGemLibrary
+  module SharedFunctionality
+    include LibraryTree::Watcher
+  end
+end
+
+module MyApp
+  include MyGemLibrary::SharedFunctionality
+end
+
+puts
+puts "*** 1st RENDER ***"
+puts LibraryTree.render
+puts "******************"
+
+module AnotherLibrary
+  include LibraryTree::Watcher
+end
+
+module YetAnotherLibrary
+  include MyGemLibrary::SharedFunctionality
+end
+
+puts
+puts "*** 2nd RENDER ***"
+puts LibraryTree.render
+puts "******************"
+
+module MyApp
+  include YetAnotherLibrary
+end
+
+puts
+puts "*** 3rd RENDER ***"
+puts LibraryTree.render
+puts "******************"

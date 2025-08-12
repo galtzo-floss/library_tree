@@ -122,7 +122,7 @@ When a watched module is included into another watched module, a link is recorde
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#included-class_method" title="included (class method)">.<strong>included</strong>(mod)  &#x21d2; Object </a>
+      <a href="#included-class_method" title="included (class method)">.<strong>included</strong>(mod)  &#x21d2; void </a>
     
 
     
@@ -136,7 +136,7 @@ When a watched module is included into another watched module, a link is recorde
   
 
   
-    <span class="summary_desc"><div class='inline'>
+    <span class="summary_desc"><div class='inline'><p>Mark the including module as tracked and extend it to observe future inclusions.</p>
 </div></span>
   
 </li>
@@ -154,27 +154,52 @@ When a watched module is included into another watched module, a link is recorde
       <div class="method_details first">
   <h3 class="signature first" id="included-class_method">
   
-    .<strong>included</strong>(mod)  &#x21d2; <tt>Object</tt> 
+    .<strong>included</strong>(mod)  &#x21d2; <tt>void</tt> 
   
 
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p><p>Mark the including module as tracked and extend it to observe future inclusions</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>mod</span>
+      
+      
+        <span class='type'>(<tt>Module</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-21
-22
-23
-24
-25
-26</pre>
+26
+27
+28
+29
+30
+31</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/library_tree/watcher.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'lib/library_tree/watcher.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_included'>included</span><span class='lparen'>(</span><span class='id identifier rubyid_mod'>mod</span><span class='rparen'>)</span>
   <span class='comment'># Mark the module itself as tracked
@@ -192,7 +217,7 @@ When a watched module is included into another watched module, a link is recorde
 </div>
 
       <div id="footer">
-  Generated on Tue Aug 12 01:48:13 2025 by
+  Generated on Tue Aug 12 03:17:26 2025 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.37 (ruby-3.4.5).
 </div>
