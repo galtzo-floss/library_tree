@@ -37,12 +37,10 @@ module LibraryTree
     def self.included: (Module mod) -> void
   end
 
-  module self
-    def roots: -> Array[Node]
-    def nodes: -> Array[Node]
-    def render: -> String
-    def reset!: -> void
-  end
+  def self.roots: -> Array[Node]
+  def self.nodes: -> Array[Node]
+  def self.render: -> String
+  def self.reset!: -> void
 
   # See the writing guide of rbs: https://github.com/ruby/rbs#guides
 end
