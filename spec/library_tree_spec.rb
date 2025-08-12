@@ -20,15 +20,15 @@ RSpec.describe LibraryTree do
       LTSpecB.module_eval { include LTSpecC }
 
       roots = described_class.roots
-      expect(roots.map(&:mod)).to include(LTSpecA)
-      a = roots.find { |n| n.mod == LTSpecA }
-      expect(a.children.map(&:mod)).to include(LTSpecB)
-      b = a.children.find { |n| n.mod == LTSpecB }
-      expect(b.children.map(&:mod)).to include(LTSpecC)
+      expect(roots.map(&:name)).to include(LTSpecA.name)
+      a = roots.find { |n| n.name == LTSpecA.name }
+      expect(a.children.map(&:name)).to include(LTSpecB.name)
+      b = a.children.find { |n| n.name == LTSpecB.name }
+      expect(b.children.map(&:name)).to include(LTSpecC.name)
 
       # Including the same module again should not duplicate edges
       LTSpecA.module_eval { include LTSpecB }
-      expect(a.children.select { |n| n.mod == LTSpecB }.size).to eq(1)
+      expect(a.children.count { |n| n.name == LTSpecB.name }).to eq(1)
     end
 
     it "links even if the base is not watched (3rd-degree inclusion)" do
@@ -37,8 +37,8 @@ RSpec.describe LibraryTree do
       LTSpecUnwatched.module_eval { include LTSpecC }
 
       # Even though base isn't watched, inclusion of a watched module should be tracked
-      node_c = described_class.nodes.find { |n| n.mod == LTSpecC }
-      expect(node_c.parents.map(&:mod)).to include(LTSpecUnwatched)
+      node_c = described_class.nodes.find { |n| n.name == LTSpecC.name }
+      expect(node_c.parents.map(&:name)).to include(LTSpecUnwatched.name)
     end
 
     it "can render and handle cycles without infinite recursion" do
@@ -152,13 +152,13 @@ RSpec.describe LibraryTree do
         # Now assert the structures
 
         # Roots should include the two top-level watched modules; additional roots may exist (e.g., unwatched includers like uw2)
-        root_mods = described_class.roots.map(&:mod)
-        expect(root_mods).to include(r1, r2)
+        root_names = described_class.roots.map(&:name)
+        expect(root_names).to include(r1.name, r2.name)
         # Ensure branch modules are not roots (they have parents)
-        expect(root_mods).not_to include(a)
-        expect(root_mods).not_to include(b)
-        expect(root_mods).not_to include(c)
-        expect(root_mods).not_to include(shared)
+        expect(root_names).not_to include(a.name)
+        expect(root_names).not_to include(b.name)
+        expect(root_names).not_to include(c.name)
+        expect(root_names).not_to include(shared.name)
 
         output = described_class.render
 

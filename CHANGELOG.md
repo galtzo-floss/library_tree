@@ -14,9 +14,9 @@ and this project adheres to [Semantic Versioning v2](https://semver.org/spec/v2.
 
 ## [1.0.0] - 2025-08-12
 - TAG: [v1.0.0][1.0.0t]
-- COVERAGE: 100.00% -- 96/96 lines in 5 files
+- COVERAGE: 100.00% -- 94/94 lines in 5 files
 - BRANCH COVERAGE: 100.00% -- 10/10 branches in 5 files
-- 93.94% documented
+- 93.75% documented
 ### Added
 - Initial release
 

@@ -7,22 +7,17 @@ module LibraryTree
   # In Ruby, when A includes B, A depends on B.
   # We will model edges parent -> child as: including_module -> included_module
   class Node
-    # @return [Module] the underlying Ruby module being tracked
+    # @return [String] the name of the underlying Ruby module being tracked
     # @return [Array<LibraryTree::Node>] parents of this node (including modules)
     # @return [Array<LibraryTree::Node>] children of this node (included modules)
-    attr_reader :mod, :parents, :children
+    attr_reader :name, :parents, :children
 
     # Create a node for a Ruby module
     # @param mod [Module] the module to track
     def initialize(mod)
-      @mod = mod
+      @name = mod.name || mod.inspect
       @parents = [] # Array<Node>
       @children = [] # Array<Node>
-    end
-
-    # @return [String] a human-friendly name for the module
-    def name
-      mod.name || mod.inspect
     end
 
     # Add a child node (an included module)
