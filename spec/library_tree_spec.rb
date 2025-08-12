@@ -80,6 +80,21 @@ RSpec.describe LibraryTree do
       expect(output).to include("  * LTSpecB")
     end
 
+    it "does not link when the included module is not tracked" do
+      # Create an untracked module that only has the inclusion callback
+      untracked = Module.new
+      base = Module.new
+      # Manually extend the ClassMethods so `included` is called, but do NOT mark it tracked
+      untracked.extend(LibraryTree::Watcher::ClassMethods)
+
+      # Include the untracked module into a base module; since it's not tracked, no link should be created
+      base.module_eval { include untracked }
+
+      # Registry should still be empty (no nodes created)
+      expect(described_class.nodes).to eq([])
+      expect(described_class.roots).to eq([])
+    end
+
     context "when a big chain is involved" do
       # Write a generator method to create a chain of modules, with branching,
       #   and with interleaved modules that do not include Watcher.
@@ -165,7 +180,7 @@ RSpec.describe LibraryTree do
         # Shared leaf should appear under A, B (for both roots), C, and UW2 -> total 5 occurrences
         expect(output.scan(/\* #{Regexp.escape(shared.name)}/).size).to eq(5)
 
-        puts output
+        puts output if DEBUGGING
       end
     end
   end
