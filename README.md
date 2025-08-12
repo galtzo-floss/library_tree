@@ -322,21 +322,13 @@ See [LICENSE.txt][📄license] for the official [Copyright Notice][📄copyright
 > How wonderful it is that nobody need wait a single moment before starting to improve the world.<br/>
 >—Anne Frank
 
-Final supplication: I want Ruby to be a great place for people to solve problems,
-big and small; the way it was when I started.
-This is why I am driven to rehab libraries that have lost their luster,
-and build new libraries that solve real problems.
-I was laid off in an RIF in early 2025, and have been rejected dozens of times since then,
-mostly without even a conversation.
-I need your help to reach my goal of supporting myself, my wife, my kids,
-and the farm (12 chickens, 2 dogs, 3 rabbits, 8 cats) via my open source efforts,
-which total 79 hours over the last 7 days as I'm writing this.
-If you work at a company that uses my work, please encourage them to support me as a corporate sponsor.
-Some of my work might show up in `bundle fund`.
-But that's not a runtime solution, so it is mostly out-of-sight, out-of-mind.
-I've built a new library, [floss_funding], to help all open source developers, including myself, earn money for our work.
+I’m driven by a passion to foster a thriving open-source community – a space where people can tackle complex problems, no matter how small.  Revitalizing libraries that have fallen into disrepair, and building new libraries focused on solving real-world challenges, are my passions — totaling 79 hours of FLOSS coding over just the past seven days, a pretty regular week for me.  I was recently affected by layoffs, and the tech jobs market is unwelcoming. I’m reaching out here because your support would significantly aid my efforts to provide for my family, and my farm (11 🐔 chickens, 2 🐶 dogs, 3 🐰 rabbits, 8 🐈‍ cats).
 
-**[Floss-Funding.dev][🖇floss-funding.dev]: 👉️ No network calls. 👉️ No tracking. 👉️ No oversight. 👉️ Minimal crypto hashing. 💡 Easily disabled**
+If you work at a company that uses my work, please encourage them to support me as a corporate sponsor. My work on gems you use might show up in `bundle fund`.
+
+I’m developing a new library, [floss_funding][🖇floss-funding-gem], designed to empower open-source developers like myself to get paid for the work we do, in a sustainable way. Please give it a look.
+
+**[Floss-Funding.dev][🖇floss-funding.dev]: 👉️ No network calls. 👉️ No tracking. 👉️ No oversight. 👉️ Minimal crypto hashing. 💡 Easily disabled nags**
 
 [![Liberapay Goal Progress][⛳liberapay-img]][⛳liberapay] [![Donate on PayPal][🖇paypal-img]][🖇paypal] [![Sponsor Me on Github][🖇sponsor-img]][🖇sponsor] [![Buy me a coffee][🖇buyme-small-img]][🖇buyme] [![Donate on Polar][🖇polar-img]][🖇polar] [![Donate to my FLOSS or refugee efforts at ko-fi.com][🖇kofi-img]][🖇kofi] [![Donate to my FLOSS or refugee efforts using Patreon][🖇patreon-img]][🖇patreon]
 
