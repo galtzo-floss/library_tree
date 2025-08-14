@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Galtzo FLOSS Rakefile v1.0.2 - 2025-08-12
+# Galtzo FLOSS Rakefile v1.0.3 - 2025-08-14
 #
 # MIT License (see License.txt)
 #
@@ -10,6 +10,9 @@
 #
 # Sets up tasks for rspec, minitest, rubocop, reek, yard, and stone_checksums.
 #
+# rake bench                            # Run all benchmarks (alias for bench:run)
+# rake bench:list                       # List available benchmark scripts
+# rake bench:run                        # Run all benchmark scripts (skips on CI)
 # rake build                            # Build my_gem-1.0.0.gem into the pkg directory
 # rake build:checksum                   # Generate SHA512 checksum of my_gem-1.0.0.gem into the checksums directory
 # rake build:generate_checksums         # Generate both SHA256 & SHA512 checksums into the checksums directory, and git commit them
@@ -30,10 +33,11 @@
 # rake rubocop_gradual:check            # Run RuboCop Gradual to check the lock file
 # rake rubocop_gradual:force_update     # Run RuboCop Gradual to force update the lock file
 # rake spec                             # Run RSpec code examples
-# rake test                             # Run tests / run spec task with test task
+# rake test                             # Run tests
 # rake yard                             # Generate YARD Documentation
 
 require "bundler/gem_tasks"
+require "rbconfig"
 
 defaults = []
 
@@ -197,5 +201,58 @@ rescue LoadError
     warn("NOTE: stone_checksums isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
   end
 end
+
+# --- Benchmarks (dev-only) ---
+namespace :bench do
+  desc "List available benchmark scripts"
+  task :list do
+    bench_files = Dir[File.join(__dir__, "benchmarks", "*.rb")].sort
+    if bench_files.empty?
+      puts "No benchmark scripts found under benchmarks/."
+    else
+      bench_files.each { |f| puts File.basename(f) }
+    end
+  end
+
+  desc "Run all benchmark scripts (skips on CI)"
+  task :run do
+    if ENV.fetch("CI", "false").casecmp("true").zero?
+      puts "Benchmarks are disabled on CI. Skipping."
+      next
+    end
+
+    ruby = RbConfig.ruby
+    bundle = Gem.bindir ? File.join(Gem.bindir, "bundle") : "bundle"
+    bench_files = Dir[File.join(__dir__, "benchmarks", "*.rb")].sort
+    if bench_files.empty?
+      puts "No benchmark scripts found under benchmarks/."
+      next
+    end
+
+    use_bundler = ENV.fetch("BENCH_BUNDLER", "0") == "1"
+
+    bench_files.each do |script|
+      puts "\n=== Running: #{File.basename(script)} ==="
+      if use_bundler
+        cmd = [bundle, "exec", ruby, "-Ilib", script]
+        system(*cmd) || abort("Benchmark failed: #{script}")
+      else
+        # Run benchmarks without Bundler to reduce overhead and better reflect plain ruby -Ilib
+        begin
+          require "bundler"
+          Bundler.with_unbundled_env do
+            system(ruby, "-Ilib", script) || abort("Benchmark failed: #{script}")
+          end
+        rescue LoadError
+          # If Bundler isn't available, just run directly
+          system(ruby, "-Ilib", script) || abort("Benchmark failed: #{script}")
+        end
+      end
+    end
+  end
+end
+
+desc "Run all benchmarks (alias for bench:run)"
+task bench: "bench:run"
 
 task default: defaults
