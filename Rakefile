@@ -1,6 +1,17 @@
 # frozen_string_literal: true
 
-# Galtzo FLOSS Rakefile v1.0.3 - 2025-08-14
+# Galtzo FLOSS Rakefile v1.0.8 - 2025-08-17
+#
+# CHANGELOG
+# v1.0.0 - initial release w/ support for rspec, minitest, rubocop, reek, yard, and stone_checksums
+# v1.0.1 - fix test / spec tasks running 2x
+# v1.0.2 - fix duplicate task warning from RuboCop
+# v1.0.3 - add bench tasks to run mini benchmarks (add scripts to /benchmarks)
+# v1.0.4 - add support for floss_funding:install
+# v1.0.5 - add support for halting in Rake tasks with binding.b (from debug gem)
+# v1.0.6 - add RBS files and checksums to YARD-generated docs site
+# v1.0.7 - works with vanilla ruby, non-gem, bundler-managed, projects
+# v1.0.8 - improved Dir globs, add back and document rbconfig dependency
 #
 # MIT License (see License.txt)
 #
@@ -8,7 +19,7 @@
 #
 # Expected to work in any project that uses Bundler.
 #
-# Sets up tasks for rspec, minitest, rubocop, reek, yard, and stone_checksums.
+# Sets up tasks for floss_funding, rspec, minitest, rubocop, reek, yard, and stone_checksums.
 #
 # rake bench                            # Run all benchmarks (alias for bench:run)
 # rake bench:list                       # List available benchmark scripts
@@ -36,14 +47,31 @@
 # rake test                             # Run tests
 # rake yard                             # Generate YARD Documentation
 
-require "bundler/gem_tasks"
-require "rbconfig"
+DEBUGGING = ENV.fetch("DEBUG", "false").casecmp("true").zero?
+
+# External gems
+require "bundler/gem_tasks" if !Dir[File.join(__dir__, "*.gemspec")].empty?
+require "rbconfig" if !Dir[File.join(__dir__, "benchmarks")].empty? # Used by `rake bench:run`
+require "debug" if DEBUGGING
 
 defaults = []
 
 is_ci = ENV.fetch("CI", "false").casecmp("true") == 0
 
 ### DEVELOPMENT TASKS
+# Setup Floss Funding
+begin
+  require "floss_funding"
+  FlossFunding.install_tasks
+rescue LoadError
+  desc("(stub) floss_funding is unavailable")
+  namespace(:floss_funding) do
+    task("install") do
+      warn("NOTE: floss_funding isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
+    end
+  end
+end
+
 # Setup Kettle Soup Cover
 begin
   require "kettle-soup-cover"
@@ -107,10 +135,10 @@ end
 # rubocop:disable Rake/DuplicateTask
 if Rake::Task.task_defined?("spec") && !Rake::Task.task_defined?("test")
   desc "run spec task with test task"
-  task test: :spec
+  task :test => :spec
 elsif !Rake::Task.task_defined?("spec") && Rake::Task.task_defined?("test")
   desc "run test task with spec task"
-  task spec: :test
+  task :spec => :test
 else
   # Add spec as pre-requisite to 'test'
   Rake::Task[:test].enhance(["spec"])
@@ -178,7 +206,10 @@ begin
       "*.cff",
       "*.md",
       "*.txt",
+      "checksums/**/*.sha256",
+      "checksums/**/*.sha512",
       "REEK",
+      "sig/**/*.rbs",
     ]
   end
   defaults << "yard"
@@ -253,6 +284,6 @@ namespace :bench do
 end
 
 desc "Run all benchmarks (alias for bench:run)"
-task bench: "bench:run"
+task :bench => "bench:run"
 
-task default: defaults
+task :default => defaults
