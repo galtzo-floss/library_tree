@@ -1,0 +1,93 @@
+{
+  "appraisal: \"current\"\nexec_cmd: \"rake test\"": [
+    {
+      "file": ".github/workflows/current.yml",
+      "lines": [
+        41,
+        51,
+        59
+      ]
+    }
+  ],
+  "bench_files = Dir[File.join(__dir__, \"benchmarks\", \"*.rb\")].sort\nif bench_files.empty?": [
+    {
+      "file": "Rakefile",
+      "lines": [
+        240,
+        257
+      ]
+    }
+  ],
+  "exec_cmd: \"rake test\"\ngemfile: \"Appraisal.root\"": [
+    {
+      "file": ".github/workflows/current.yml",
+      "lines": [
+        42,
+        52,
+        60
+      ]
+    },
+    {
+      "file": ".github/workflows/heads.yml",
+      "lines": [
+        43,
+        59
+      ]
+    },
+    {
+      "file": ".github/workflows/jruby.yml",
+      "lines": [
+        41,
+        49
+      ]
+    },
+    {
+      "file": ".github/workflows/truffle.yml",
+      "lines": [
+        42,
+        50,
+        58
+      ]
+    }
+  ],
+  "gemfile: \"Appraisal.root\"\nrubygems: default": [
+    {
+      "file": ".github/workflows/current.yml",
+      "lines": [
+        53,
+        61
+      ]
+    },
+    {
+      "file": ".github/workflows/heads.yml",
+      "lines": [
+        44,
+        60
+      ]
+    },
+    {
+      "file": ".github/workflows/jruby.yml",
+      "lines": [
+        42,
+        50
+      ]
+    },
+    {
+      "file": ".github/workflows/truffle.yml",
+      "lines": [
+        43,
+        51,
+        59
+      ]
+    }
+  ],
+  "if bench_files.empty?\nputs \"No benchmark scripts found under benchmarks/.\"": [
+    {
+      "file": "Rakefile",
+      "lines": [
+        241,
+        258
+      ]
+    }
+  ]
+}
