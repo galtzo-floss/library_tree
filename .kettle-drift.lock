@@ -1,11 +1,10 @@
 {
-  "appraisal: \"current\"\nexec_cmd: \"rake test\"": [
+  "// Use 'forwardPorts' to make a list of ports inside the container available locally.\n// \"forwardPorts\": [],": [
     {
-      "file": ".github/workflows/current.yml",
+      "file": ".devcontainer/devcontainer.json",
       "lines": [
-        41,
-        51,
-        59
+        11,
+        22
       ]
     }
   ],
@@ -13,71 +12,8 @@
     {
       "file": "Rakefile",
       "lines": [
-        240,
-        257
-      ]
-    }
-  ],
-  "exec_cmd: \"rake test\"\ngemfile: \"Appraisal.root\"": [
-    {
-      "file": ".github/workflows/current.yml",
-      "lines": [
-        42,
-        52,
-        60
-      ]
-    },
-    {
-      "file": ".github/workflows/heads.yml",
-      "lines": [
-        43,
-        59
-      ]
-    },
-    {
-      "file": ".github/workflows/jruby.yml",
-      "lines": [
-        41,
-        49
-      ]
-    },
-    {
-      "file": ".github/workflows/truffle.yml",
-      "lines": [
-        42,
-        50,
-        58
-      ]
-    }
-  ],
-  "gemfile: \"Appraisal.root\"\nrubygems: default": [
-    {
-      "file": ".github/workflows/current.yml",
-      "lines": [
-        53,
-        61
-      ]
-    },
-    {
-      "file": ".github/workflows/heads.yml",
-      "lines": [
-        44,
-        60
-      ]
-    },
-    {
-      "file": ".github/workflows/jruby.yml",
-      "lines": [
-        42,
-        50
-      ]
-    },
-    {
-      "file": ".github/workflows/truffle.yml",
-      "lines": [
-        43,
-        51,
-        59
+        338,
+        355
       ]
     }
   ],
@@ -85,8 +21,8 @@
     {
       "file": "Rakefile",
       "lines": [
-        241,
-        258
+        339,
+        356
       ]
     }
   ]

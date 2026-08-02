@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 
 module LibraryTree
-  # Contains version information for LibraryTree
+  # Version namespace for this gem.
   module Version
-    # The current version of the LibraryTree gem
+    # Current gem version.
     VERSION = "1.0.0"
   end
+  # Current gem version exposed at the traditional constant location.
+  VERSION = Version::VERSION # Traditional Constant Location
 end

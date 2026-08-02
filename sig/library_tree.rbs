@@ -9,24 +9,24 @@ module LibraryTree
     attr_reader children: Array[Node]
 
     def initialize: (Module mod) -> void
-    def name: -> String
+    def name: () -> String
     def add_child: (Node child) -> void
     def add_parent: (Node parent) -> void
-    def root?: -> bool
+    def root?: () -> bool
     def to_h: (?Hash[Integer, bool] seen) -> Hash[Symbol, untyped]
     def render: (?Integer indent, ?Hash[Integer, bool] seen) -> String
   end
 
   module Registry
-    def self.mutex: -> ::Mutex
-    def self.nodes: -> Hash[Module, Node]
+    def self.mutex: () -> ::Mutex
+    def self.nodes: () -> Hash[Module, Node]
     def self.tracked?: (Module mod) -> bool
     def self.ensure_node: (Module mod) -> Node
     def self.mark_tracked: (Module mod) -> void
     def self.link: (Module parent, Module child) -> void
-    def self.roots: -> Array[Node]
-    def self.all: -> Array[Node]
-    def self.reset!: -> void
+    def self.roots: () -> Array[Node]
+    def self.all: () -> Array[Node]
+    def self.reset!: () -> void
   end
 
   module Watcher
@@ -37,10 +37,11 @@ module LibraryTree
     def self.included: (Module mod) -> void
   end
 
-  def self.roots: -> Array[Node]
-  def self.nodes: -> Array[Node]
-  def self.render: -> String
-  def self.reset!: -> void
+  def self.roots: () -> Array[Node]
+  def self.nodes: () -> Array[Node]
+  def self.render: () -> String
+  def self.reset!: () -> void
+  VERSION: String
 
   # See the writing guide of rbs: https://github.com/ruby/rbs#guides
 end

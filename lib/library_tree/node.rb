@@ -50,7 +50,7 @@ module LibraryTree
       seen[object_id] = true
       {
         name: name,
-        children: children.map { |c| c.to_h(seen) },
+        children: children.map { |c| c.to_h(seen) }
       }
     end
 

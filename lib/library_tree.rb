@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative "library_tree/version"
 require_relative "library_tree/watcher"
 require_relative "library_tree/registry"
+require_relative "library_tree/version"
 
 module LibraryTree
   # Main namespace for LibraryTree. Provides convenience accessors to the registry

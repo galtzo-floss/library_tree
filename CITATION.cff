@@ -1,20 +1,20 @@
 cff-version: 1.2.0
-title: LibraryTree
+title: "library_tree"
 message: >-
   If you use this work and you want to cite it,
   then you can use the metadata from this file.
 type: software
 authors:
-  - given-names: Peter Hurn
-    family-names: Boling
-    email: peter@railsbling.com
-    affiliation: railsbling.com
+  - given-names: "Peter H."
+    family-names: "Boling"
+    email: "floss@galtzo.com"
+    affiliation: "galtzo.com"
     orcid: 'https://orcid.org/0009-0008-8519-441X'
 identifiers:
   - type: url
-    value: 'https://github.com/galtzo-floss/library_tree/'
-    description: LibraryTree
-repository-code: 'https://github.com/galtzo-floss/library_tree/'
+    value: 'https://github.com/galtzo-floss/library_tree'
+    description: "library_tree"
+repository-code: 'https://github.com/galtzo-floss/library_tree'
 abstract: >-
-  LibraryTree
+  library_tree
 license: See license file

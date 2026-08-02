@@ -50,7 +50,7 @@ RSpec.describe LibraryTree do
       LibraryTree::Registry.link(LTSpecB, LTSpecA) # B -> A
 
       roots = described_class.roots
-      expect(roots).to eq([])
+      expect(roots).to be_empty
 
       # Depending on cycle, roots may be empty; render all nodes instead
       output = described_class.nodes.map { |n| n.render }.join
@@ -63,7 +63,7 @@ RSpec.describe LibraryTree do
 
     it "LibraryTree.render returns empty string when there are no roots" do
       # no watched modules; roots should be empty
-      expect(described_class.roots).to eq([])
+      expect(described_class.roots).to be_empty
       expect(described_class.render).to eq("")
     end
 
@@ -89,8 +89,8 @@ RSpec.describe LibraryTree do
       base.module_eval { include untracked }
 
       # Registry should still be empty (no nodes created)
-      expect(described_class.nodes).to eq([])
-      expect(described_class.roots).to eq([])
+      expect(described_class.nodes).to be_empty
+      expect(described_class.roots).to be_empty
     end
 
     context "when a big chain is involved" do
