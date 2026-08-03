@@ -102,7 +102,7 @@ dependency_conflicts:
       modular: gemfiles/modular/rspec.gemfile
       action: remove_modular_gem
       reason: "The gemspec owns the RSpec formatter development dependency."
-      
+
 # This project's identifying emoji.
 # Used as the leading emoji in the README H1 heading and in the gemspec
 # summary and description. Every gem should have its own unique emoji.
