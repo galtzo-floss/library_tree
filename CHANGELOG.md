@@ -92,6 +92,8 @@ Please file a bug if you notice a violation of semantic versioning.
   legacy manual bundle install path, avoiding setup-time Bundler full-index
   failures against `gem.coop`.
 
+- Avoid redefining the debug flag while loading Rake and spec helpers
+
 ### Security
 
 ## [1.0.0] - 2025-08-12

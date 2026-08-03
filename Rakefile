@@ -47,7 +47,7 @@
 # rake test                             # Run tests
 # rake yard                             # Generate YARD Documentation
 
-DEBUGGING = ENV.fetch("DEBUG", "false").casecmp("true").zero?
+debugging = ENV.fetch("DEBUG", "false").casecmp("true").zero?
 
 # External gems
 require "bundler/gem_tasks" if !Dir[File.join(__dir__, "*.gemspec")].empty?
