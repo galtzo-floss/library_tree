@@ -148,7 +148,7 @@ if kettle_jem_selftest_unavailable_note
 end
 
 require "rbconfig" if !Dir[File.join(__dir__, "benchmarks")].empty? # Used by `rake bench:run`
-require "debug" if DEBUGGING
+require "debug" if debugging
 
 defaults = []
 
