@@ -18,7 +18,7 @@ gem_version =
     lib = File.expand_path("lib", File.dirname(__FILE__))
     $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
     require "library_tree/version"
-  LibraryTree::Version::VERSION
+    LibraryTree::Version::VERSION
   end
 
 Gem::Specification.new do |spec|
