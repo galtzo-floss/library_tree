@@ -42,6 +42,12 @@ module LibraryTree
   def self.render: () -> String
   def self.reset!: () -> void
   VERSION: String
+  module Error
+    module Version
+      VERSION: String
+    end
+    VERSION: String
+  end
 
   # See the writing guide of rbs: https://github.com/ruby/rbs#guides
 end
