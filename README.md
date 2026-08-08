@@ -134,6 +134,11 @@ gem install library_tree
 
 ## ⚙️ Configuration
 
+No global configuration is required. Include `LibraryTree::Watcher` in the
+modules whose inclusion relationships should be recorded, then call
+`LibraryTree.render` when the tree is needed. Watchers may be added at any time
+before rendering.
+
 ## 🔧 Basic Usage
 
 Usage patterns:
