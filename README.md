@@ -94,7 +94,9 @@ The _amazing_ test matrix is powered by the kettle-dev stack.
 
 </details>
 
-### Enterprise Support [![Tidelift](https://tidelift.com/badges/package/rubygems/library_tree)](https://tidelift.com/subscription/pkg/rubygems-library_tree?utm_source=rubygems-library_tree&utm_medium=referral&utm_campaign=readme)
+### Enterprise Support
+
+[![Tidelift](https://tidelift.com/badges/package/rubygems/library_tree)](https://tidelift.com/subscription/pkg/rubygems-library_tree?utm_source=rubygems-library_tree&utm_medium=referral&utm_campaign=readme)
 
 Available as part of the Tidelift Subscription.
 
