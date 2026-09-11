@@ -1,6 +1,74 @@
 {
-  "Rakefile:2132352197": [
-    [165, 5, 15, "Rake/Desc: Describe the task with `desc` method.", 842824456]
+  "Rakefile:1565663173": [
+    [53, 70, 6, "Lint/LtsRuby/UnavailableMethod: Pathname#empty? is unavailable before Ruby 2.4.", 1165546895],
+    [66, 8, 4, "Lint/LtsRuby/UnavailableMethod: Enumerable/Enumerator::Lazy#uniq is unavailable before Ruby 2.4.", 2087995782],
+    [150, 62, 6, "Lint/LtsRuby/UnavailableMethod: Pathname#empty? is unavailable before Ruby 2.4.", 1165546895],
+    [165, 5, 15, "Rake/Desc: Describe the task with `desc` method.", 842824456],
+    [178, 12, 2, "Lint/LtsRuby/UnavailableMethod: Method/Proc#<< is unavailable before Ruby 2.6.", 5859461],
+    [209, 12, 2, "Lint/LtsRuby/UnavailableMethod: Method/Proc#<< is unavailable before Ruby 2.6.", 5859461],
+    [274, 12, 2, "Lint/LtsRuby/UnavailableMethod: Method/Proc#<< is unavailable before Ruby 2.6.", 5859461],
+    [308, 12, 2, "Lint/LtsRuby/UnavailableMethod: Method/Proc#<< is unavailable before Ruby 2.6.", 5859461],
+    [335, 12, 2, "Lint/LtsRuby/UnavailableMethod: Method/Proc#<< is unavailable before Ruby 2.6.", 5859461],
+    [361, 20, 6, "Lint/LtsRuby/UnavailableMethod: Pathname#empty? is unavailable before Ruby 2.4.", 1165546895],
+    [378, 20, 6, "Lint/LtsRuby/UnavailableMethod: Pathname#empty? is unavailable before Ruby 2.4.", 1165546895]
+  ],
+  "gemfiles/modular/coverage_local.gemfile:1588487406": [
+    [19, 27, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002],
+    [37, 101, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002],
+    [46, 5, 5, "Lint/LtsRuby/UnavailableMethod: Thread#fetch is unavailable before Ruby 2.5.", 171106201],
+    [49, 31, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002]
+  ],
+  "gemfiles/modular/documentation_local.gemfile:3687110777": [
+    [19, 27, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002]
+  ],
+  "gemfiles/modular/style_local.gemfile:1317794630": [
+    [22, 27, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002]
+  ],
+  "gemfiles/modular/templating.gemfile:2602645835": [
+    [6, 39, 4, "Lint/LtsRuby/UnavailableMethod: Set#to_s is unavailable before Ruby 2.5.", 2087961426],
+    [7, 28, 6, "Lint/LtsRuby/UnavailableMethod: Pathname#empty? is unavailable before Ruby 2.4.", 1165546895],
+    [8, 40, 4, "Lint/LtsRuby/UnavailableMethod: Set#to_s is unavailable before Ruby 2.5.", 2087961426],
+    [8, 45, 6, "Lint/LtsRuby/UnavailableMethod: Pathname#empty? is unavailable before Ruby 2.4.", 1165546895],
+    [11, 35, 4, "Lint/LtsRuby/UnavailableMethod: Set#to_s is unavailable before Ruby 2.5.", 2087961426],
+    [11, 40, 6, "Lint/LtsRuby/UnavailableMethod: Pathname#empty? is unavailable before Ruby 2.4.", 1165546895]
+  ],
+  "gemfiles/modular/templating_local.gemfile:802438125": [
+    [20, 27, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002],
+    [85, 101, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002],
+    [94, 5, 5, "Lint/LtsRuby/UnavailableMethod: Thread#fetch is unavailable before Ruby 2.5.", 171106201],
+    [97, 31, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002]
+  ],
+  "lib/library_tree.rb:902571100": [
+    [33, 34, 4, "Lint/LtsRuby/UnavailableMethod: Set#join is unavailable before Ruby 3.0.", 2088000679]
+  ],
+  "lib/library_tree/node.rb:1500890480": [
+    [18, 19, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002],
+    [28, 17, 2, "Lint/LtsRuby/UnavailableMethod: Method/Proc#<< is unavailable before Ruby 2.6.", 5859461],
+    [36, 16, 2, "Lint/LtsRuby/UnavailableMethod: Method/Proc#<< is unavailable before Ruby 2.6.", 5859461],
+    [42, 16, 6, "Lint/LtsRuby/UnavailableMethod: Pathname#empty? is unavailable before Ruby 2.4.", 1165546895],
+    [50, 11, 11, "Lint/LtsRuby/UnavailableMethod: Matrix/Vector#[]= is unavailable before Ruby 2.6.", 141219780],
+    [53, 40, 4, "Lint/LtsRuby/UnavailableMethod: Array/Enumerable#to_h is unavailable before Ruby 2.1.", 2087961417],
+    [63, 11, 11, "Lint/LtsRuby/UnavailableMethod: Matrix/Vector#[]= is unavailable before Ruby 2.6.", 141219780],
+    [66, 36, 1, "Lint/LtsRuby/UnavailableMethod: Enumerator#+ is unavailable before Ruby 2.6.", 177550]
+  ],
+  "library_tree.gemspec:421268688": [
+    [25, 8, 4, "Lint/LtsRuby/UnavailableMethod: Thread#name= is unavailable before Ruby 2.3.", 2087876002],
+    [47, 24, 9, "Lint/LtsRuby/UnavailableMethod: Symbol#end_with? is unavailable before Ruby 2.7.", 308216808],
+    [53, 16, 16, "Lint/LtsRuby/UnavailableMethod: Matrix/Vector#[]= is unavailable before Ruby 2.6.", 3147164910],
+    [54, 16, 19, "Lint/LtsRuby/UnavailableMethod: Matrix/Vector#[]= is unavailable before Ruby 2.6.", 279056797],
+    [55, 16, 17, "Lint/LtsRuby/UnavailableMethod: Matrix/Vector#[]= is unavailable before Ruby 2.6.", 4196512528],
+    [56, 16, 19, "Lint/LtsRuby/UnavailableMethod: Matrix/Vector#[]= is unavailable before Ruby 2.6.", 3960302181],
+    [57, 16, 21, "Lint/LtsRuby/UnavailableMethod: Matrix/Vector#[]= is unavailable before Ruby 2.6.", 2359681088],
+    [57, 78, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002],
+    [58, 16, 15, "Lint/LtsRuby/UnavailableMethod: Matrix/Vector#[]= is unavailable before Ruby 2.6.", 1629595435],
+    [59, 16, 12, "Lint/LtsRuby/UnavailableMethod: Matrix/Vector#[]= is unavailable before Ruby 2.6.", 2962383854],
+    [60, 16, 12, "Lint/LtsRuby/UnavailableMethod: Matrix/Vector#[]= is unavailable before Ruby 2.6.", 3248034781],
+    [60, 71, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002],
+    [61, 16, 15, "Lint/LtsRuby/UnavailableMethod: Matrix/Vector#[]= is unavailable before Ruby 2.6.", 1397552598],
+    [62, 16, 20, "Lint/LtsRuby/UnavailableMethod: Matrix/Vector#[]= is unavailable before Ruby 2.6.", 2025055014],
+    [63, 16, 25, "Lint/LtsRuby/UnavailableMethod: Matrix/Vector#[]= is unavailable before Ruby 2.6.", 1727630048],
+    [75, 13, 2, "Lint/LtsRuby/UnavailableMethod: Method/Proc#<< is unavailable before Ruby 2.6.", 5859461],
+    [100, 13, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002]
   ],
   "spec/library_tree_spec.rb:2575192463": [
     [7, 5, 19, "Lint/ConstantDefinitionInBlock: Do not define constants this way within a block.", 2640345239],
@@ -9,8 +77,28 @@
     [9, 5, 19, "RSpec/LeakyConstantDeclaration: Stub module constant instead of declaring explicitly.", 2605881716],
     [11, 5, 19, "Lint/ConstantDefinitionInBlock: Do not define constants this way within a block.", 2566678741],
     [11, 5, 19, "RSpec/LeakyConstantDeclaration: Stub module constant instead of declaring explicitly.", 2566678741],
+    [24, 30, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002],
+    [26, 35, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002],
+    [31, 39, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002],
     [35, 7, 27, "Lint/ConstantDefinitionInBlock: Do not define constants this way within a block.", 2713662565],
     [35, 7, 27, "RSpec/LeakyConstantDeclaration: Stub module constant instead of declaring explicitly.", 2713662565],
+    [40, 51, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002],
+    [56, 59, 4, "Lint/LtsRuby/UnavailableMethod: Set#join is unavailable before Ruby 3.0.", 2088000679],
+    [156, 42, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002],
+    [156, 51, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002],
+    [158, 45, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002],
+    [159, 45, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002],
+    [160, 45, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002],
+    [161, 50, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002],
+    [166, 43, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002],
+    [167, 43, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002],
+    [170, 44, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002],
+    [171, 44, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002],
+    [175, 50, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002],
+    [175, 59, 4, "Lint/LtsRuby/UnavailableMethod: StringScanner#size is unavailable before Ruby 2.5.", 2088346912],
+    [176, 44, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002],
+    [179, 55, 4, "Lint/LtsRuby/UnavailableMethod: Symbol#name is unavailable before Ruby 3.0.", 2087876002],
+    [179, 64, 4, "Lint/LtsRuby/UnavailableMethod: StringScanner#size is unavailable before Ruby 2.5.", 2088346912],
     [181, 9, 11, "RSpec/Output: Do not write to stdout in specs.", 4045523544]
   ]
 }
