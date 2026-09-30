@@ -12,8 +12,17 @@
     {
       "file": "Rakefile",
       "lines": [
-        360,
-        377
+        362,
+        379
+      ]
+    }
+  ],
+  "exec_cmd: \"kettle-test\"\nrubygems: latest": [
+    {
+      "file": ".github/workflows/current.yml",
+      "lines": [
+        43,
+        49
       ]
     }
   ],
@@ -21,8 +30,8 @@
     {
       "file": "Rakefile",
       "lines": [
-        361,
-        378
+        363,
+        380
       ]
     }
   ]
