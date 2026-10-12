@@ -57,6 +57,12 @@ task :default do
   puts "Default task complete."
 end
 
+# Without this, a generated docs/ directory makes Rake resolve the bare
+# name `docs` as an up-to-date file task, so `rake docs` exits 0 having
+# regenerated nothing.
+desc "Generate YARD documentation"
+task docs: "yard"
+
 # simplecov:disable
 ### MONOREPO FAMILY TASKS
 if Dir.exist?(File.join(__dir__, "gems"))
@@ -239,6 +245,8 @@ else
   # Add spec as pre-requisite to 'test'
   Rake::Task[:test].enhance(["spec"])
 end
+# rubocop:enable Rake/DuplicateTask
+
 # rubocop:enable Rake/DuplicateTask
 
 # rubocop:enable Rake/DuplicateTask
